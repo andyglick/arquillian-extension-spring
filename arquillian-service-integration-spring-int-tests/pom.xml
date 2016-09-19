@@ -11,11 +11,11 @@
     <!-- Model Version -->
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>arquillian-service-integration-spring-3-int-tests</artifactId>
+    <artifactId>arquillian-service-integration-spring-int-tests</artifactId>
     <packaging>jar</packaging>
 
-    <name>Arquillian Spring Framework 3 Integration Tests</name>
-    <description>Spring Framework 3 Arquillian integration tests</description>
+    <name>Arquillian Spring Framework Integration Tests</name>
+    <description>Spring Framework Arquillian integration tests</description>
 
     <!-- Properties -->
     <properties>
@@ -70,8 +70,22 @@
                     <groupId>org.jboss.arquillian.extension</groupId>
                     <artifactId>arquillian-transaction-jta</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
+
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.21</version>
+      </dependency>
 
         <dependency>
             <groupId>org.arquillian.container</groupId>
